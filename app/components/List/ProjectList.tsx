@@ -29,11 +29,11 @@ const ProjectList = () => {
     },
   ];
   return (
-    <ul className="list-disc list-inside  justify-between space-y-2 flex space-x-2 ">
+    <ul className="list-disc list-inside  justify-between flex space-x-2  ">
       {projects.map((project) => (
         <div
           key={project.id}
-          className="mb-2 border p-4 rounded-lg shadow w-full flex flex-col justify-between "
+          className=" border p-4 rounded-lg shadow w-full flex flex-col justify-between bg-primary-100 "
         >
           <div className="font-bold text-xl">{project.name}</div>
           <div>{project.description}</div>
