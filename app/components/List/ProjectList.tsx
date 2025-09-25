@@ -26,21 +26,26 @@ const ProjectList = () => {
       name: "原住民族傳統智慧創作保護資訊網",
       description: "提供原住民族傳統智慧創作的保護與推廣資訊。",
       url: "https://www.titic.cip.gov.tw/",
-    },
+    },{
+      id:4,
+      name:"台北找房+",
+      description:"提供台北房價查詢",
+      url:"https://househunt.land.gov.taipei/"
+    }
   ];
   return (
-    <ul className="list-disc list-inside  justify-between flex space-x-2  ">
+    <ul className="list-disc list-inside justify-between flex space-x-2 w-full">
       {projects.map((project) => (
         <div
           key={project.id}
           className=" border p-4 rounded-lg shadow w-full flex flex-col justify-between bg-primary-100 "
         >
-          <div className="font-bold text-xl">{project.name}</div>
+          <div className="font-bold text-xl w-52">{project.name}</div>
           <div>{project.description}</div>
           <div className="mt-2 justify-end flex">
             <button className="bg-secondary-400 text-white px-3 py-1  hover:bg-secondary-600 rounded-md">
               {project.url && (
-                <a href={project.url} className=" hover:underline">
+                <a href={project.url} className=" hover:underline" target="_blank">
                   查看專案
                 </a>
               )}
