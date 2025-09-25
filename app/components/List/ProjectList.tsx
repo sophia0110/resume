@@ -29,7 +29,7 @@ const ProjectList = () => {
     },
   ];
   return (
-    <ul className="list-disc list-inside  justify-between space-y-2 ">
+    <ul className="list-disc list-inside  justify-between space-y-2 flex space-x-2 ">
       {projects.map((project) => (
         <div
           key={project.id}
@@ -38,7 +38,7 @@ const ProjectList = () => {
           <div className="font-bold text-xl">{project.name}</div>
           <div>{project.description}</div>
           <div className="mt-2 justify-end flex">
-            <button className="bg-sky-400 text-white px-3 py-1  hover:bg-sky-600 rounded-md">
+            <button className="bg-secondary-400 text-white px-3 py-1  hover:bg-secondary-600 rounded-md">
               {project.url && (
                 <a href={project.url} className=" hover:underline">
                   查看專案

@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <main className="flex min-h-screen flex-col p-6 bg-gray-100">
       <div className="grid grid-cols-4 gap-4 mt-4 grow">
-        <div className="col-span-1 rounded-lg shadow  bg-sky-300/20 p-4 space-x-2">
+        <div className="col-span-1 rounded-lg shadow  bg-primary-500/20 p-4 space-x-2">
           <Image
             src="/imgs/sophia.jpg"
             alt="me"
@@ -26,20 +26,20 @@ export default function Page() {
           <div className="border-b border-gray-300 p-2 text-lg font-semibold">
             聯絡方式：
           </div>
-          <div className="p-2 text-lg font-semibold">
+          <div className="p-2 text-lg font-semibold flex-wrap">
             Email: 0110sophiasu@gmail.com
           </div>
 
-          <div className="p-2 text-lg font-semibold">
+          <div className="p-2 text-lg font-semibold flex-wrap">
             github: https://github.com/sophia0110
           </div>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-3">
           <div className="pb-2 font-bold text-xl">工作經歷：</div>
           <List />
         </div>
-        <div className="col-span-1">
-          <div className="pb-2 font-bold text-xl">專案Dome ：</div>
+        <div className="col-span-3 mt-4">
+          <div className="pb-2 font-bold text-xl">專案Demo：</div>
           <ProjectList />
         </div>
       </div>

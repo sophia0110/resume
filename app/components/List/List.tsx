@@ -59,7 +59,7 @@ const works: Work[] = [
 const List: React.FC = () => (
   <ul>
     {works.map(({ id, title, company, period, description, skills }) => (
-      <li key={id} className="mb-4 p-4 bg-slate-400/20 rounded-lg shadow">
+      <li key={id} className="mb-4 p-4 bg-secondary-400/50 rounded-lg shadow">
         <div className="text-lg font-semibold pb-2">
           {title} {company}
         </div>
