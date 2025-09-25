@@ -18,9 +18,21 @@ export default function Page() {
             姓名：Sophia Su
           </div>
           <div className="border-b border-gray-300 p-2 text-lg font-semibold">
-            學歷：銘傳大學
+            學歷：銘傳大學 都市規劃與防災學系、環境規劃與永續發展學分學程
           </div>
-          <div className="p-2 text-lg font-semibold">資策會前端工程師課程</div>
+          <div className="p-2 text-lg font-semibold">
+            財團法人資訊工業策進會 582個小時 前端工程師就業養成班
+          </div>
+          <div className="border-b border-gray-300 p-2 text-lg font-semibold">
+            聯絡方式：
+          </div>
+          <div className="p-2 text-lg font-semibold">
+            Email: 0110sophiasu@gmail.com
+          </div>
+
+          <div className="p-2 text-lg font-semibold">
+            github: https://github.com/sophia0110
+          </div>
         </div>
         <div className="col-span-2">
           <div className="pb-2 font-bold text-xl">工作經歷：</div>
