@@ -60,7 +60,7 @@ export default function Page() {
         </div>
 
         {/* 專案區塊 */}
-        <div className="col-span-1 sm:col-span-2 mt-4">
+        <div className="col-span-1 sm:col-span-2 lg:col-span-4 mt-4">
           <div className="pb-2 font-bold text-xl">專案 Demo：</div>
           <ProjectList />
         </div>

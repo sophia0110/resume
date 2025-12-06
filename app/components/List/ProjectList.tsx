@@ -34,13 +34,13 @@ const ProjectList = () => {
     }
   ];
   return (
-    <ul className="list-disc list-inside justify-between flex space-x-2 w-full">
+    <ul className="list-disc list-inside justify-between space-x-2 w-full flex-wrap grid  grid-cols-4 gap-4">
       {projects.map((project) => (
         <div
           key={project.id}
-          className=" border p-4 rounded-lg shadow w-full flex flex-col justify-between bg-primary-100 "
+          className=" border rounded-lg shadow flex flex-col justify-between bg-primary-100 w-full  p-4 col-span-2"
         >
-          <div className="font-bold text-xl w-52">{project.name}</div>
+          <div className="font-bold text-xl w-full">{project.name}</div>
           <div>{project.description}</div>
           <div className="mt-2 justify-end flex">
             <button className="bg-secondary-400 text-white px-3 py-1  hover:bg-secondary-600 rounded-md">
