@@ -9,72 +9,88 @@ type Work = {
   skills?: string;
 };
 
+
 const works: Work[] = [
   {
     id: 1,
-    title: "工程師",
-    company: "緯創資通股份有限公司 (Wistron)",
-    period: "2022 - Present",
+    title: "高級軟體工程師",
+    company: "緯創資通股份有限公司",
+    period: "2022/8 – 在職中",
     description: [
-      "1.使用敏捷式開發 scrum",
-      "2.參與開發公司數位轉型專案及電網管理專案，主要負責前端開發，部分專案也有進行後端開發。",
-      "3.運用React.js/Tailwind 前後分離進行開發及Next.js進行開發，並支援其他專案開發，使用Angular.js sass 進行開發",
-      "4.測試工具: Jest、Vitest、playwright",
-      "5.運用git 進行版本控制",
+      "參與公司數位轉型與電網管理系統開發，負責前端架構設計、功能實作與系統整合。",
+      "使用 React.js / Next.js 建構前後端分離架構，提升系統可維護性與擴充性。",
+      "支援 Angular.js 專案開發與維護，透過 Tailwind CSS / Sass 建立樣式系統規範。",
+      "與 PM、設計師與後端工程師協作，採 Scrum 敏捷流程進行需求迭代與版本交付。",
+      "導入自動化測試流程，使用 Jest、Vitest 與 Playwright 建立單元測試與 E2E 測試。",
+      "參與系統管理平台功能開發，實作與調整 RESTful API（Redfish）以支援設備狀態管理。",
+      "具備跨層問題排查能力，能從前端介面追蹤至 API 與服務端狀態。"
     ],
-
-    skills: "Next.js React Angular TypeScript JavaScript HTML CSS",
+    skills: "React.js · Next.js · Angular.js · TypeScript · Tailwind CSS · Sass · Git · Jest · Vitest · Playwright · RESTful API",
   },
   {
     id: 2,
     title: "前端工程師",
-    company: "研鼎智能股份有限公司（GOYOURLIFE INC.）",
-    period: "2021 - 2022",
+    company: "研鼎智能股份有限公司",
+    period: "2021/6 – 2022/8",
     description: [
-      "1. 地圖平台前端功能維護與新功能研發",
-      "- 資料視覺化、炫目之向量地圖運用功能",
-      "- 各項圖資運用、地理運算、 地點/門牌搜尋 API 介接",
-      "- 各項客製化專案功能開發與維護",
-      "2.規劃執行介面架構及模組之設計，並控管介面設計進度。",
-      "3.RWD 響應式網頁設計",
-      "4.同時與 PM、設計師、Back-End 共同合作，串接API。",
-      "5.運用git 進行版本控制",
-      "6.參與過16個專案，同時執行2個專案並維護專案網頁",
-      "7. 使用 Linux系統及Docker",
+      "負責地圖平台前端開發與功能維護，包含資料視覺化與互動式地圖操作。",
+      "串接地理資訊 API，實作地點搜尋、圖資顯示與地理運算功能。",
+      "規劃前端模組架構，提升專案可讀性與可維護性。",
+      "與 PM、設計師與後端工程師協作完成客製化專案。",
+      "實作 RWD 響應式設計，優化跨裝置使用體驗。",
+      "參與 16+ 專案開發，同時負責多專案維護與版本迭代。",
+      "於 Linux 環境與 Docker 架構下進行開發與部署。"
     ],
-    skills: "Linux Docker HTML CSS JQuery PHP Yii Git",
+    skills: "HTML · CSS · JavaScript · jQuery · Git · Docker · Linux",
   },
   {
     id: 3,
-    title: "規劃師(PM)",
-    period: "2018-2020",
+    title: "規劃師",
     company: "惇陽工程顧問有限公司",
+    period: "2018/8 – 2020/8",
     description: [
-      "參與超過25個專案投標，撰寫書面研究報告及規劃內容，能有條理的區分事件的輕重緩急，具備專案控管得能力、溝通協調能力及擁有8個獨立執行專案的經驗，並且同時負責的5個專案。",
+      "參與 25+ 專案投標與研究規劃報告撰寫。",
+      "獨立負責 8 專案執行與跨部門協調。",
+      "培養專案管理、時程控管與跨團隊溝通能力。"
     ],
-    skills: "專案控管 跨領域溝通協調 AutoCAD ArcGis",
+    skills: "AutoCAD · ArcGIS · Illustrator · 專案管理",
   },
 ];
 
+
 const List: React.FC = () => (
-  <ul>
+  <div className="space-y-16">
     {works.map(({ id, title, company, period, description, skills }) => (
-      <li key={id} className="mb-4 p-4 bg-secondary-400/50 rounded-lg shadow">
-        <div className="text-lg font-semibold pb-2">
-          {title} {company}
+      <div key={id} className="border-b border-neutral-200 pb-12">
+
+        <div className="text-xl font-semibold tracking-tight">
+          {company}
         </div>
-        <div>{period}</div>
-        <div className="mt-2 space-y-2">
+
+        <div className="text-neutral-500 mt-1">
+          {title} · {period}
+        </div>
+
+        <ul className="mt-6 space-y-3 text-neutral-600 leading-relaxed">
           {description.map((desc, index) => (
-            <div key={index}>{desc}</div>
+            <li key={index}>• {desc}</li>
+          ))}
+        </ul>
+
+        <div className="flex flex-wrap gap-2 mt-6">
+          {skills?.split(" · ").map((skill, index) => (
+            <span
+              key={index}
+              className="px-3 py-1 bg-neutral-100 text-neutral-700 rounded-full text-sm"
+            >
+              {skill}
+            </span>
           ))}
         </div>
-        <div className="flex  mt-2">
-          <div className="font-semibold">Skills: </div> {skills}
-        </div>
-      </li>
+
+      </div>
     ))}
-  </ul>
+  </div>
 );
 
 export default List;
