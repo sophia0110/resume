@@ -21,17 +21,17 @@ const ProjectList = () => {
       tech: ["React", "Next.js", "TypeScript", "RESTful API","React Flow"],
       url: "https://smartgrid.cloudcleanenergy.com/",
     },
-    {
-      id: 2,
-      name: "高空風能 Dashboard",
-      description: [
-        "建構風能設備監控與管理後台系統。",
-        "設計模組化元件架構，提升功能擴充性。",
-        "實作資料視覺化圖表與即時狀態呈現。"
-      ],
-      tech: ["React", "Tailwind", "Chart Integration"],
-      url: "https://wpms.cloudcleanenergy.com/en",
-    },
+    // {
+    //   id: 2,
+    //   name: "高空風能 Dashboard",
+    //   description: [
+    //     "建構風能設備監控與管理後台系統。",
+    //     "設計模組化元件架構，提升功能擴充性。",
+    //     "實作資料視覺化圖表與即時狀態呈現。"
+    //   ],
+    //   tech: ["React", "Tailwind", "Chart Integration"],
+    //   url: "https://wpms.cloudcleanenergy.com/en",
+    // },
     {
       id: 3,
       name: "原住民族傳統智慧創作保護資訊網",
